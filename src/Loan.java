@@ -22,14 +22,14 @@ public class Loan {
         this.borrowedDate = null;
     }
 
-    public boolean loanBook(Member member) {
-        if (isAvailable()) {
-            this.borrowedBy = member;
-            this.borrowedDate = LocalDate.now();
-            return true;
-        }
-        return false;
-    }
+//    public boolean loanBook(Member member) {
+//        if (isAvailable()) {
+//            this.borrowedBy = member;
+//            this.borrowedDate = LocalDate.now();
+//            return true;
+//        }
+//        return false;
+//    }
 
     public boolean isAvailable() {
         return borrowedBy == null;
@@ -42,15 +42,15 @@ public class Loan {
         return borrowedDate.plusDays(14);
 
     }
-
-    public boolean isOverdue() {
-        LocalDate today = LocalDate.now();
-        if (getDueDate() == null) return false;
-        if (today.isAfter(getDueDate())) {
-            return true;
-        }
-        return false;
-    }
+//
+//    public boolean isOverdue() {
+//        LocalDate today = LocalDate.now();
+//        if (getDueDate() == null) return false;
+//        if (today.isAfter(getDueDate())) {
+//            return true;
+//        }
+//        return false;
+//    }
 
     public int getMemberId() {
         return borrowedBy.memberId;
@@ -64,8 +64,8 @@ public class Loan {
                 ,book, borrowedBy, getDueDate());
     }
 
-    public int getLoanId() {
-        return this.loanId;
-    }
+//    public int getLoanId() {
+//        return this.loanId;
+//    }
 
 }

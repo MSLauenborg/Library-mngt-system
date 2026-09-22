@@ -15,9 +15,9 @@ public class Book {
         this.borrowedDate = null;
     }
 
-    public String getBook() {
-        return author;
-    }
+//    public String getBook() {
+//        return author;
+//    }
 
     public int getID() {
         return this.id;
