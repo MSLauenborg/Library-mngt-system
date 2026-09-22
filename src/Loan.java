@@ -59,7 +59,8 @@ public class Loan {
 
     public String toString() {
         return String.format(""" 
-                        %s %s, afleveringsfrist: %s"""
+                        %s %s, afleveringsfrist: %s
+                        """
                 ,book, borrowedBy, getDueDate());
     }
 

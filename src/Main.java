@@ -2,6 +2,8 @@ public static void main(String[] args) {
 
     Library library = new Library();
 
+    ConsoleUI consoleUI = new ConsoleUI(library);
+
 
     Book book1 = new Book("Klaus Rifbjerg",
             "Den kroniske uskyld",
@@ -20,8 +22,9 @@ public static void main(String[] args) {
     Member member1 = new Member("Morten", 1234);
     Member member2 = new Member("Louise", 4321);
     Member member3 = new Member("Morten", 1111);
-    final Loan loan1 = new Loan(book1, member1, LocalDate.of(2026, 9, 16));
-    final Loan loan2 = new Loan(book3,member2, LocalDate.of(2026,9,16));
+
+    //final Loan loan1 = new Loan(book1, member1, LocalDate.of(2026, 9, 16));
+   // final Loan loan2 = new Loan(book3,member2, LocalDate.of(2026,9,16));
 
     library.addMember(member1);
     library.addMember(member2);
@@ -29,20 +32,38 @@ public static void main(String[] args) {
 
     library.addBook(book1);
     library.addBook(book2);
-    Book foundBook = library.getBooks(1);
+    library.addBook(book3);
+
+    consoleUI.run();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   // Book foundBook = library.getBooks(1);
 //    IO.println(foundBook);
-    Book unknownBook = library.getBooks(100);
+   // Book unknownBook = library.getBooks(100);
 //    IO.println(unknownBook);
 
-    Member foundMember = library.getMembers(1234);
+   // Member foundMember = library.getMembers(1234);
     //IO.println(foundMember);
 
-    library.loanBook(1,1234);
-    library.loanBook(2,1234);
+   // library.loanBook(1,1234);
+   // library.loanBook(2,1234);
 
-    ArrayList<Loan> loans = library.findLoansByMemberId(1234);
+    //ArrayList<Loan> loans = library.findLoansByMemberId(1234);
 
-    IO.println(loans);
+    //IO.println(loans);
    // IO.println(loans);
     //IO.println(loans);
    // IO.println(library.returnBook(1));
